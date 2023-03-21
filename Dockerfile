@@ -1,5 +1,5 @@
 FROM rockylinux:8
-EXPOSE 80
+EXPOSE 5001
 
 ENV DEBIAN_FRONTEND noninteractive
 
