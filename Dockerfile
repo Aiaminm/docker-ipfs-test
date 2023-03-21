@@ -28,6 +28,8 @@ RUN ipfs config --json Datastore.GCPeriod '"12h"'
 RUN ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080
 RUN ipfs config Addresses.API /ip4/0.0.0.0/tcp/80
 
+RUN ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]'
+
 # by default, run `ipfs daemon` to start as a running node
 ENTRYPOINT ["ipfs"]
 CMD ["daemon"]
