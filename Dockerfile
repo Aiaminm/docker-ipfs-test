@@ -25,9 +25,9 @@ RUN ipfs config --json Reprovider.Interval '"1h"'
 RUN ipfs config --json Datastore.GCPeriod '"12h"'
 
 
-# config the gateway endpoint
+# config the port
 RUN ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/80
-
+RUN ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001
 
 # by default, run `ipfs daemon` to start as a running node
 ENTRYPOINT ["ipfs"]
