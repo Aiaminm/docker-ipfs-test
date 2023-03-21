@@ -7,8 +7,8 @@ RUN  yum install wget tar sudo bash curl procps -y
 
 
 # Install ipfs using ipfs-update and initialize
-RUN wget https://dist.ipfs.tech/kubo/v0.18.0/kubo_v0.18.0_linux-amd64.tar.gz \
-    && tar -xvzf kubo_v0.18.0_linux-amd64.tar.gz \
+RUN wget https://dist.ipfs.tech/kubo/v0.18.0/kubo_v0.18.1_linux-amd64.tar.gz \
+    && tar -xvzf kubo_v0.18.1_linux-amd64.tar.gz \
     && cd ./kubo \
     && sudo bash install.sh \
     && ipfs init
