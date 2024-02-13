@@ -17,7 +17,7 @@ RUN curl -Lo ipfs.tar.gz https://github.com/ipfs/kubo/releases/download/v0.19.0/
 # config the peers
 
 RUN curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash
-RUN sudo yum install speedtest
+RUN yum install speedtest
 
 RUN df -h
 
