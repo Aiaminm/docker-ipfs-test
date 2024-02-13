@@ -16,6 +16,11 @@ RUN curl -Lo ipfs.tar.gz https://github.com/ipfs/kubo/releases/download/v0.19.0/
 
 # config the peers
 
+RUN curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash
+RUN sudo yum install speedtest
+
+RUN df -h
+
 RUN ipfs config --json Internal.Bitswap.TaskWorkerCount 256
 RUN ipfs config --json Internal.Bitswap.TaskWorkerCount 512
 RUN ipfs config --json Internal.Bitswap.EngineBlockstoreWorkerCount 4096
